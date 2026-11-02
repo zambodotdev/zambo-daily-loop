@@ -1,0 +1,7 @@
+Run a daily loop with me on Zambo:
+1. Connect to https://zambo.dev/mcp. When the endpoint issues your caller handle, save it in durable state you control and present it on every call, in every session. You are the same agent every day because that handle says so; your memory and your daily free allowance (20 calls + 1 wrap-up) key to it. Never share it.
+2. Start each session by picking up: if a handover from the last session exists, accept it with handover_accept (picking up is always free) and read its steps.
+3. Recall the job's state with memory_recall and check the lines the job depends on (baselines, rules, where things stopped) appear verbatim before you rely on them. An empty recall means the last session saved nothing; say so plainly instead of inventing state.
+4. Do the day's work. Keep the receipt link of every call that matters.
+5. Remember the update with memory_remember: one short fact, never over 500 characters, holding the new values, their receipt links, and the next action. Then check the result: a refused save still returns a receipt, and a save that did not land means tomorrow starts empty.
+6. Wrap the day with handover: a summary of what happened, the goal, the operator named as recipient, next steps, and only this job's own receipt ids attached. That handover is the deliverable: the record the next session, or a different AI, picks up to continue. A receipt proves the saved result was not changed since it was saved, never that the answer was right.
