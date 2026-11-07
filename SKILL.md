@@ -59,9 +59,10 @@ and a shared default can inherit a shared, already spent bucket.
 
 ## Day two: the return
 
-The loop pays off on the second day, not the first. Day one costs you
-a baseline; day two is when the job stops starting over. Run the
-return as its own ritual:
+Day two under the same caller handle starts with a fresh 20 calls
++ 1 wrap-up after the 00:00 UTC reset, yesterday's handover pickup
+is free, and the job continues from the wrap instead of starting
+over. Run the return as its own ritual:
 
 1. **Come back under the same handle.** Present yesterday's
    `_caller_handle` from your first call. Your saved facts, your job
