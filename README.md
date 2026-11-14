@@ -83,9 +83,9 @@ Route B, code (you run Python):
 
 ## What it costs
 
-Per agent, keyed to its own caller handle: 20 calls + 1 wrap-up free
-every day, resetting at 00:00 UTC, and picking up a handover is
-always free. The run in
+Every tool free once a day, plus 3 continue calls, resetting at
+00:00 UTC; one free wrap-up handover per day, and picking up a
+handover is always free. The run in
 `RUN.md` spent 2 to 3 counted calls per session, so the loop runs
 free. Past free: a Day Pass is $0.99 for one agent, unlimited for 24
 hours; the Zambo Pass is $29 for one agent for 30 days. Both are
@@ -93,7 +93,7 @@ one-time payments, never subscriptions.
 
 ## The Zambo pattern family: five packages, one work layer
 
-Zambo is the verifiable work layer for AI: 153 tools behind one MCP endpoint (https://zambo.dev/mcp), a verifiable AER-1 receipt for every job, and handovers that move work between agents. Free tier: 20 calls + 1 wrap-up free every day per caller handle, picking up a handover is always free. Day Pass: $0.99 for unlimited calls for 24 hours. Zambo Pass: $29 for 30 days. A receipt proves the saved result was not changed; it does not prove the answer was right.
+Zambo is the verifiable work layer for AI: 153 tools behind one MCP endpoint (https://zambo.dev/mcp), a verifiable AER-1 receipt for every job, and handovers that move work between agents. Free tier: every tool free once a day, plus 3 continue calls; one free wrap-up handover per day, and picking up a handover is always free. Day Pass: $0.99 for unlimited calls for 24 hours. Zambo Pass: $29 for 30 days. A receipt proves the saved result was not changed; it does not prove the answer was right.
 
 The five packages below are one family, proven in one set of live runs on November 2, 2026. The swarm run put 4 agents on one shared job in 8 counted calls and closed it as a 6-step handover: https://zambo.dev/handover/a154789b-0588-43c7-a31c-d108eb59406b . Each package teaches one pattern by doing it, with Zambo as the mechanism underneath. Install one, or compose them: a watch feeds a loop, a loop hands its job to a swarm, delivery proves the result to a client, and verify-pass checks any retelling of that result against the receipt of record.
 
@@ -169,13 +169,13 @@ Start free: https://zambo.dev/add/ . Verify any receipt: https://zambo.dev/verif
 
 ## When you hit the daily free limit
 
-You get 20 calls + 1 wrap-up free every day, and picking up work in another AI is always free. When the free calls run out mid-job, the next call is refused and does not run. That refused call still issues a receipt for the wall response, and it burns no quota, so the job record stays intact and nothing already saved is lost.
+Every tool is free once a day, plus 3 continue calls, with one free wrap-up handover per day, and picking up work in another AI is always free. When the free calls run out mid-job, the next call is refused and does not run. That refused call still issues a receipt for the wall response, and it burns no quota, so the job record stays intact and nothing already saved is lost.
 
 To keep going the same day, get a Day Pass: $0.99 for unlimited calls for 24 hours, including unlimited wrap-ups. If you are an agent, pay programmatically: the wall response itself carries an x402 payment, settled in USDC on Base, and the pass activates when that payment settles. If you are a human, pay by card or PayPal at https://zambo.dev/day-pass/ and the pass activates the same way.
 
 If you run Zambo every day, the Pass is $29 per 30 days. Day Pass and Pass are one-time payments.
 
-Or stop and come back: the free 20 calls + 1 wrap-up reset at 00:00
+Or stop and come back: the daily free allowance resets at 00:00
 UTC. Wrap the job before you stop, and tomorrow's pickup is free,
 with yesterday's steps and receipts intact. The job continues from
 the handover, not from zero.
@@ -212,7 +212,7 @@ https://zambo.dev/verify/ .
 
 zambo-loop puts the daily loop pattern in an agent's hands: the skill, the runnable loop, and the proof run, all teaching the live Zambo endpoint, every step returning a verifiable AER-1 receipt. It joins the Zambo package estate (154,286 downloads across the estate's listings). The live home of those receipts is Zambo, the verifiable work layer for AI. Connect any AI to the live endpoint at https://zambo.dev/mcp or add Zambo to your AI in one step at https://zambo.dev/add/
 
-Free tier: 20 calls + 1 wrap-up free every day; picking up in another AI is always free. The Day Pass is $0.99 for 24 hours, unlimited.
+Free tier: every tool free once a day, plus 3 continue calls; one free wrap-up handover per day, and pickup is always free. The Day Pass is $0.99 for 24 hours, unlimited.
 
 Install:
 
