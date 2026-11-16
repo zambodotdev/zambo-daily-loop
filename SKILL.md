@@ -30,13 +30,12 @@ state file before doing anything else, and present it as
 `_caller_label`. Your saved facts, your job timelines, and your daily
 free allowance all key to that handle. Present the same handle in a
 new session and you are the same agent, with yesterday intact. Lose
-it, and you come back as a stranger: no memory, a fresh allowance, no
-continuity. One handle per agent, never shared, never shown in
+it, and you come back as a stranger: no memory and no continuity. Metering is per network, so a fresh handle mints no fresh allowance. One handle per agent, never shared, never shown in
 ordinary replies. Use a User-Agent of your own from the very first
 initialize: the quota handle is issued against your network identity,
 and a shared default can inherit a shared, already spent bucket.
 
-**Quota rule, in the placement that works:** Put `_caller_handle` inside the tool arguments on every call, as a field of the arguments object itself, not in `_meta` and not in a header. That argument placement is what meters your own daily bucket. Presenting a handle only at `_meta` level or in a header can route you onto a shared network bucket and wall you early.
+**Quota rule, in the placement that works:** Put `_caller_handle` inside the tool arguments on every call, as a field of the arguments object itself, not in `_meta` and not in a header. Metering is per network by design, not per handle: every metered tool is free once per network per UTC day, plus 3 continue calls shared across tools, and a fresh handle mints no fresh allowance.
 
 ## The four beats
 
@@ -59,16 +58,14 @@ and a shared default can inherit a shared, already spent bucket.
 
 ## Day two: the return
 
-Day two under the same caller handle starts with a fresh 20 calls
-+ 1 wrap-up after the 00:00 UTC reset, yesterday's handover pickup
+Day two under the same caller handle starts fresh after the 00:00 UTC reset: every tool free once a day, plus 3 continue calls shared across tools, and one free wrap-up, yesterday's handover pickup
 is free, and the job continues from the wrap instead of starting
 over. Run the return as its own ritual:
 
 1. **Come back under the same handle.** Present yesterday's
    `_caller_handle` from your first call. Your saved facts, your job
    timeline, and today's fresh allowance all key to it: the free
-   tier resets at 00:00 UTC, so a new UTC day hands you 20 calls + 1
-   wrap-up free again. A fresh handle instead starts a stranger: no
+   tier resets at 00:00 UTC, so a new UTC day restores the free tier: every tool free once, plus 3 shared continue calls, and one free wrap-up. A fresh handle instead starts a stranger: no
    memory, no receipts, no job.
 2. **Pick up before you work.** `handover_accept` on yesterday's
    handover is always free and spends none of today's calls. Read
@@ -79,8 +76,7 @@ over. Run the return as its own ritual:
    receipts from day one stay bound to the job, so day two adds
    steps to one record instead of opening a second, thinner one.
 4. **End the same way.** Remember the update as one short fact and
-   wrap again. The wrap is the day's free wrap-up, outside the 20
-   calls. A session that ends without wrapping gives tomorrow
+   wrap again. The wrap is the day's free wrap-up, outside the counted calls. A session that ends without wrapping gives tomorrow
    nothing to pick up, and the loop breaks at exactly the joint that
    makes it compound.
 
@@ -108,8 +104,7 @@ wrap is a formality.
 
 ## The accounting (why this shape, in numbers)
 
-Free tier, per agent: 20 calls + 1 wrap-up free every day, keyed to
-the agent's own caller handle; picking up a handover is always free.
+Free tier, metered per network: every tool free once a day, plus 3 continue calls shared across tools; one free wrap-up handover per day, and picking up a handover is always free.
 The run in `RUN.md` ran the loop's sessions at 2 to 3 counted calls
 each, wrap included free, so a daily agent on this shape runs free
 indefinitely. When the agent outgrows the free shape, a Day Pass is
@@ -129,7 +124,7 @@ resetting, and makes each day checkable.
 
 ## The Zambo pattern family: five packages, one work layer
 
-Zambo is the verifiable work layer for AI: 153 tools behind one MCP endpoint (https://zambo.dev/mcp), a verifiable AER-1 receipt for every job, and handovers that move work between agents. Free tier: 20 calls + 1 wrap-up free every day per caller handle, picking up a handover is always free. Day Pass: $0.99 for unlimited calls for 24 hours. Zambo Pass: $29 for 30 days. A receipt proves the saved result was not changed; it does not prove the answer was right.
+Zambo is the verifiable work layer for AI: 153 tools behind one MCP endpoint (https://zambo.dev/mcp), a verifiable AER-1 receipt for every job, and handovers that move work between agents. Free tier: every tool free once a day, plus 3 continue calls shared across tools, metered per network; one free wrap-up handover per day, and picking up a handover is always free. Day Pass: $0.99 for unlimited calls for 24 hours. Zambo Pass: $29 for 30 days. A receipt proves the saved result was not changed; it does not prove the answer was right.
 
 The five packages below are one family, proven in one set of live runs on November 2, 2026. The swarm run put 4 agents on one shared job in 8 counted calls and closed it as a 6-step handover: https://zambo.dev/handover/a154789b-0588-43c7-a31c-d108eb59406b . Each package teaches one pattern by doing it, with Zambo as the mechanism underneath. Install one, or compose them: a watch feeds a loop, a loop hands its job to a swarm, delivery proves the result to a client, and verify-pass checks any retelling of that result against the receipt of record.
 
