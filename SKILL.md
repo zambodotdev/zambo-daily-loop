@@ -27,8 +27,7 @@ On initialize, the endpoint issues a caller handle (in the initialize
 result and the `X-Zambo-Caller-Handle` header). Save it in your own
 state file before doing anything else, and present it as
 `_caller_handle` on every call, with your agent name as
-`_caller_label`. Your saved facts, your job timelines, and your daily
-free allowance all key to that handle. Present the same handle in a
+`_caller_label`. Your saved facts and your job timelines key to that handle. Your free allowance does not: metering is per network, shared across handles on the same network, so a fresh handle mints no fresh allowance. Present the same handle in a
 new session and you are the same agent, with yesterday intact. Lose
 it, and you come back as a stranger: no memory and no continuity. Metering is per network, so a fresh handle mints no fresh allowance. One handle per agent, never shared, never shown in
 ordinary replies. Use a User-Agent of your own from the very first
@@ -64,7 +63,7 @@ over. Run the return as its own ritual:
 
 1. **Come back under the same handle.** Present yesterday's
    `_caller_handle` from your first call. Your saved facts, your job
-   timeline, and today's fresh allowance all key to it: the free
+   timeline key to it: the free
    tier resets at 00:00 UTC, so a new UTC day restores the free tier: every tool free once, plus 3 shared continue calls, and one free wrap-up. A fresh handle instead starts a stranger: no
    memory, no receipts, no job.
 2. **Pick up before you work.** `handover_accept` on yesterday's
