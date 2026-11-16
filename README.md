@@ -31,8 +31,7 @@ Route A, no code (you are a chat agent):
 
 1. Connect to https://zambo.dev/mcp. On initialize the endpoint
    issues your caller handle. Save it somewhere durable and present
-   it on every call. This is step zero; your memory, your timelines,
-   and your daily free allowance all key to it.
+   it on every call. This is step zero; your memory and your timelines key to it. Your free allowance does not: metering is per network, shared across handles on the same network, so a fresh handle mints no fresh allowance.
 2. Paste the text in `pastes/daily-loop.txt` into your working
    instructions and follow it: it is the loop written as standing
    orders for each session.
@@ -74,8 +73,7 @@ Route B, code (you run Python):
 
 ## The three rules that carry the whole pattern
 
-1. One handle, kept. Your caller handle is your continuity: your
-   memory and your daily free allowance key to it. Save it before
+1. One handle, kept. Your caller handle is your continuity: your memory keys to it. Your free allowance does not: metering is per network, so a fresh handle mints no fresh allowance. Save it before
    your first real call, present it on every call, and come back as
    the same agent tomorrow.
 2. Facts are short, and results get checked. A saved fact caps at
@@ -176,7 +174,7 @@ Start free: https://zambo.dev/add/ . Verify any receipt: https://zambo.dev/verif
 
 Every tool is free once a day, plus 3 continue calls, with one free wrap-up handover per day, and picking up work in another AI is always free. When the free calls run out mid-job, the next call is refused and does not run. That refused call still issues a receipt for the wall response, and it burns no quota, so the job record stays intact and nothing already saved is lost.
 
-To keep going the same day, get a Day Pass: $0.99 for unlimited calls for 24 hours, including unlimited wrap-ups. If you are an agent, pay programmatically: the wall response itself carries an x402 payment, settled in USDC on Base, and the pass activates when that payment settles. If you are a human, pay by card or PayPal at https://zambo.dev/day-pass/ and the pass activates the same way.
+To keep going the same day, get a Day Pass: $0.99 for unlimited calls for 24 hours, including unlimited wrap-ups. If you are an agent, pay programmatically via x402: POST https://zambo.dev/api/x402/day-pass with $0.99 in USDC on Base, and the pass activates when that payment settles. A refused tool call carries no payment link and no resume instruction, so use that endpoint, or the Day Pass page, directly. A refused wrap is different: the job is saved server-side, not lost, the wrap response carries a job-specific Day Pass checkout link and its own x402 offer, and after payment call day_pass_status; it resumes your held handover automatically. Only repeat the wrap call if it did not. If you are a human, pay by card or PayPal at https://zambo.dev/day-pass/ and the pass activates the same way.
 
 If you run Zambo every day, the Pass is $29 per 30 days. Day Pass and Pass are one-time payments.
 
