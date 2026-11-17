@@ -90,8 +90,8 @@ Every tool free once a day, plus 3 continue calls, resetting at
 00:00 UTC; one free wrap-up handover per day, and picking up a
 handover is always free. The run in
 `RUN.md` spent 2 to 3 counted calls per session, so the loop runs
-free. Past free: a Day Pass is $0.99 for one agent, unlimited for 24
-hours; the Zambo Pass is $29 for one agent for 30 days, $19 for
+free. Past free: a Day Pass is $0.99, unlimited for 24
+hours; the Zambo Pass is $29 for 30 days, $19 for
 30 days for $ZAMBO holders. A Lifetime Pass is $250, one payment.
 All are one-time payments, never subscriptions.
 
