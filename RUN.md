@@ -73,9 +73,7 @@ The loop's shape, per session: work and memory calls only. Session 1
 spent 2 counted calls (the prices; the refused remember executed
 nothing). The repair remember spent 1. Session 3 spent 3 (recall,
 price, remember) and its wrap was the free daily wrap-up. The whole
-proof, refusals and diagnostics included, stayed inside one identity's
-single day of free tier: 20 calls + 1 wrap-up free every day, keyed to
-the caller handle, and picking up a handover is always free.
+proof, refusals and diagnostics included, stayed inside one day of free tier: Every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. Metering is per network, not per caller handle.
 
 ## The two lessons, which are the package
 
@@ -94,8 +92,7 @@ Every link above was fetched on 2026-11-02 after the run: all returned
 HTTP 200 (14 of 14, including both refusal receipts, the final
 handover page, and its JSON twin). One identity note, recorded for
 honesty: the first identity minted for this run was issued under this
-machine's shared default User-Agent and inherited a shared, already
-spent quota bucket (0 of 20 free calls before its first call), so it
+machine's shared default User-Agent and inherited the network shared, already spent free allowance (no free calls left before its first call), so it
 was replaced before any work was saved; the run above is the second
 identity, minted with the agent's own User-Agent from its first
 initialize, which is the discipline `loop.py` ships with.
